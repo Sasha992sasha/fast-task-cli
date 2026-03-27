@@ -82,6 +82,11 @@ def work():
         MGR.remov(f)
         save_prin()
 
+    elif a.startswith('-'): #швидке видалення по типу -index
+        f = int(a.removeprefix('-'))
+        MGR.remov(f)
+        save_prin()
+
     elif not a.isdigit(): #це швидкий набір по типу Name+1description
         mat = re.match(r"([^\+\d]+)\+(\d+)(.*)", a)
         if not mat:
