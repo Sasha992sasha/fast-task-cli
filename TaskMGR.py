@@ -34,7 +34,7 @@ class TaskMGR: #це основа робота планувальника
         try:
             self.tasks.pop(index)
         except IndexError:
-            input('Не той індекс')
+            print('Не той індекс')
 
     def print_task(self): #це вивід
         today = datetime.date.today()
