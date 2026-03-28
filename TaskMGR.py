@@ -88,7 +88,7 @@ def work():
         save_prin()
 
     elif not a.isdigit(): #це швидкий набір по типу Name+1description
-        mat = re.match(r"([^\+\d]+)\+(\d+)(.*)", a)
+        mat = re.match(r"(.+?)\+(\d+)\s*(.*)", a)
         if not mat:
             return
         else:
