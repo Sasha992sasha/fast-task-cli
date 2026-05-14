@@ -55,8 +55,7 @@ class TaskMGR: #це основа робота планувальника
 def save_prin(): #це вдобна команда щоби не повторюватись по 100 раз
     MGR.save_file()
     MGR.print_task()
-    if input(">").strip() == "r": #Це повторення 
-        work()
+    work()
 
 def work():
     a = input('1-add 2-del ').strip()
