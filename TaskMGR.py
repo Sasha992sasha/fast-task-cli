@@ -63,8 +63,7 @@ def work():
     if a == "1":
         b = input("name: ") 
         c = input("dl: ").strip()
-        d = input("desc: ")
-        
+        d = input("desc: ")  
         if c.startswith('+'):#швидка дата просто +1 замість 23.03
             try:
                 days = int(c.removeprefix('+'))
@@ -72,6 +71,14 @@ def work():
                 c = c.strftime("%d.%m")
             except:
                 input("Invalid +date ")
+                
+                  #якщо не написано - пише "-"
+        if not b: #назва
+            b = '-'
+        if not c: #дедлайн
+            c = '-'
+        if not d: #опис
+            d = '-'
                 
         e = Task(b,c,d)
         MGR.add(e)
